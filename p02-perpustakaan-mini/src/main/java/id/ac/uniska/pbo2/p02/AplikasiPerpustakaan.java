@@ -15,6 +15,7 @@ public class AplikasiPerpustakaan {
         perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
         perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
         perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
+        perpus.tambah(new Skripsi("S001", "Pemrograman Java", 2025, "Siti Rahmah", "Teknik Informatika"));
         
         Anggota siti = new Anggota("2410010123", "Siti Rahmah");
         Anggota budi = new Anggota("2410010456", "Budi Santoso");
@@ -23,7 +24,6 @@ public class AplikasiPerpustakaan {
         
         System.out.println();
         cetakPinjam(perpus, "B002", siti);
-        perpus.cari("B002").status = StatusKoleksi.TERSEDIA;
         cetakPinjam(perpus, "B002", budi);
         cetakPinjam(perpus, "M001", budi);
         System.out.println("Peminjam B002: " + perpus.getPeminjam("B002").nama());
@@ -35,6 +35,15 @@ public class AplikasiPerpustakaan {
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
                 + " dari " + perpus.getDaftarKoleksi().size());
         
+        System.out.println();
+        System.out.println("Hasil pencarian \"code\": "
+        + perpus.cariJudul("code").size() + " koleksi");
+
+        for (Koleksi k : perpus.cariJudul("code")) {
+            System.out.println(k);
+        }
+
+        cetakPinjam(perpus, "S001", siti);
     }
     
 private static void tampilkanDaftar(Perpustakaan perpus) {
