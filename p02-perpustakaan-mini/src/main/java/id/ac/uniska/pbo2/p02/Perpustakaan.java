@@ -14,14 +14,14 @@ import java.util.Map;
  * Mengelola daftar koleksi dan data peminjam.
  */
 public class Perpustakaan {
-    
+
     private final List<Koleksi> daftarKoleksi = new ArrayList<>();
     private final Map<String, Anggota> peminjam = new HashMap<>();
+
     public void tambah(Koleksi koleksi) {
-    daftarKoleksi.add(koleksi);
-}
-    
-/** Mencari koleksi berdasarkan kode. Mengembalikan null jika tidak ditemukan. */
+        daftarKoleksi.add(koleksi);
+    }
+
     public Koleksi cari(String kode) {
         for (Koleksi k : daftarKoleksi) {
             if (k.getKode().equals(kode)) {
@@ -29,58 +29,71 @@ public class Perpustakaan {
             }
         }
         return null;
-}
-    
-/** Meminjamkan koleksi kepada anggota. Mengembalikan false jika gagal. */
+    }
+
     public boolean pinjam(String kode, Anggota anggota) {
         Koleksi koleksi = cari(kode);
+
         if (koleksi == null || !koleksi.pinjam()) {
             return false;
-}
-peminjam.put(kode, anggota);
-return true;
-}
-    
-/** Mengembalikan koleksi dan menghitung dendanya. */
+        }
+
+        peminjam.put(kode, anggota);
+        return true;
+    }
+
     public long kembalikan(String kode, int hariTerlambat) {
         Koleksi koleksi = cari(kode);
+
         if (koleksi == null || koleksi.getStatus() == StatusKoleksi.TERSEDIA) {
             return 0;
+        }
+
+        koleksi.kembalikan();
+        peminjam.remove(kode);
+
+        // Polymorphism: rumus denda mengikuti jenis object
+        return koleksi.hitungDenda(hariTerlambat);
     }
-    koleksi.kembalikan();
-    peminjam.remove(kode);
-    // Polymorphism: rumus denda mengikuti jenis object (Buku atau Majalah)
-    return koleksi.hitungDenda(hariTerlambat);
-}
-    
+
     public Anggota getPeminjam(String kode) {
         return peminjam.get(kode);
-}
-    
+    }
+
     public int jumlahTersedia() {
         int jumlah = 0;
         for (Koleksi k : daftarKoleksi) {
             if (k.getStatus() == StatusKoleksi.TERSEDIA) {
                 jumlah++;
             }
+        }
+        return jumlah;
     }
-    return jumlah;
-}
-    
-/** Salinan daftar yang tidak dapat diubah, agar data asli tetap terlindungi. */
+
     public List<Koleksi> getDaftarKoleksi() {
         return List.copyOf(daftarKoleksi);
-}
+    }
+    
     public List<Koleksi> cariJudul(String kataKunci) {
         List<Koleksi> hasil = new ArrayList<>();
         String kata = kataKunci.toLowerCase();
-    
-        for (Koleksi k : daftarKoleksi){
-            if (k.getJudul().toLowerCase().contains(kata)){
+        for (Koleksi k : daftarKoleksi) {
+            if (k.getJudul().toLowerCase().contains(kata)) {
                 hasil.add(k);
             }
         }
-        
+        return hasil;
+    }
+
+    public List<Koleksi> cariSkripsi() {
+        List<Koleksi> hasil = new ArrayList<>();
+
+        for (Koleksi k : daftarKoleksi) {
+            if (k instanceof Skripsi) {
+                hasil.add(k);
+            }
+        }
+
         return hasil;
     }
 }
