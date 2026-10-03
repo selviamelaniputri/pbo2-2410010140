@@ -12,7 +12,7 @@ public class P03KomponenGui {
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> {
-        new FormPendaftaran().setVisible(true);
+        new FormTiketTravel().setVisible(true);
     });
 }
     }
