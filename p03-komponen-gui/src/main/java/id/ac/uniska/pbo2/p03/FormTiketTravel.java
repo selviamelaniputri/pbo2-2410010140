@@ -51,7 +51,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
         makanCheck = new javax.swing.JCheckBox();
         asuransiCheck = new javax.swing.JCheckBox();
         catatanLabel = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        catatanScroll = new javax.swing.JScrollPane();
         catatanArea = new javax.swing.JTextArea();
         pesanButton = new javax.swing.JButton();
         temaToggle = new javax.swing.JToggleButton();
@@ -90,7 +90,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
 
         catatanArea.setColumns(20);
         catatanArea.setRows(3);
-        jScrollPane1.setViewportView(catatanArea);
+        catatanScroll.setViewportView(catatanArea);
 
         pesanButton.setText("Pesan");
         pesanButton.setActionCommand("");
@@ -133,7 +133,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(catatanLabel)
                         .addGap(65, 65, 65)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(catatanScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(91, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -174,9 +174,9 @@ public class FormTiketTravel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(catatanLabel)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(catatanScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pesanButton)
                     .addComponent(temaToggle))
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -281,12 +281,12 @@ public class FormTiketTravel extends javax.swing.JFrame {
     private javax.swing.JRadioButton bisnisRadio;
     private javax.swing.JTextArea catatanArea;
     private javax.swing.JLabel catatanLabel;
+    private javax.swing.JScrollPane catatanScroll;
     private javax.swing.JRadioButton ekonomiRadio;
     private javax.swing.JRadioButton eksekutifRadio;
     private javax.swing.JLabel fasilitasLabel;
     private javax.swing.JTextField hpField;
     private javax.swing.JLabel hpLabel;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.ButtonGroup kelasGroup;
     private javax.swing.JLabel kelasLabel;
     private javax.swing.JCheckBox makanCheck;
