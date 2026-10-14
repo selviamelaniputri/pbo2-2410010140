@@ -12,7 +12,7 @@ Berisi tiga program Java Swing: `HaloSwing`, `FormPendaftaran`, dan `FormTiketTr
 ![Form Pemesanan Tiket Travel - Mode Gelap](form%20pemesanan%20tiket%20travel%20MODE%20GELAP.png)
 
 ### Tab Design FormTiketTravel (dengan Navigator)
-![Tab Design FormTiketTravel](GANTI-DENGAN-NAMA-FILE-LENGKAP.png)
+![Tab Design FormTiketTravel](tab%20Design%20FormTiketTravel%20yang%20memperlihatkan%20jendela%20Navigator..png)
 
 ## Jawaban Pertanyaan Refleksi
 
