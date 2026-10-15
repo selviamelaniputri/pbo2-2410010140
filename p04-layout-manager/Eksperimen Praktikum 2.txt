@@ -1,0 +1,15 @@
+Eksperimen Praktikum 2:
+1. Pada flowPanel, ubah Alignment layout menjadi Center, lalu kecilkan jendela. Apa yang berubah? Baris
+mana di initComponents() yang ikut berubah?
+= yang berubah adalah button nya jadi rata ditengah dan saat jendela dikecilkan button yang tidak muat di satu baris itu akan pindah ke baris berikutnya
+yang berubah di initComponents() adalah di bagian 
+ flowPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+ flowPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 8, 8));
+
+2. Pada gridPanel, ubah Rows menjadi 0 dan Columns menjadi 2. Berapa baris yang terbentuk dan mengapa?
+= yang terbentuk adalah 5 baris dengan 2 kolom itu karena gridlayout saat diatur jadi 0, maka jumlah barisnya ditentukan secara otomatis, sehingga jumlah baris ditentukan secara otomatis berdasarkan jumlah komponen. Karena terdapat 9 tombol, tombol akan tersusun dalam 5 baris, dengan 1 tombol pada baris terakhir.
+
+3. Pada boxPanel, isi properti maximumSize keempat tombol dengan lebar 32767 dan tinggi sama dengan
+tinggi tombol. Bagaimana lebar tombol berubah? Tambahkan juga Vertical Strut dari kategori Swing Fillers di
+antara tombol.
+= setelah maximumsize keempat tombol diatur dengan lebar 32767 dan tinggi sesuai tinggi si tombol, maka tombol pada boxpanel bisa melebar secara horizontal mengikuti ruang yang tersedia di panel. saat vertical strut ditambahkan maka akan terbentuk Jarak yang vertical diantara tombol hingga susunannya lebih renggang dan rapi

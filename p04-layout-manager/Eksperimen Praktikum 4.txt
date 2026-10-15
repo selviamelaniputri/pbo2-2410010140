@@ -1,0 +1,11 @@
+Eksperimen Praktikum 4:
+1. Ubah Weight X pada namaField menjadi 0.0, lalu lebarkan jendela. Apa yang terjadi pada isian?
+= Ksaat weight x pada namaField diubah menjadi 0.0 dan jendela dilebarkan, ukuran isian nama tidak ikut melebar secara maksimal dan tetap pada ukuran awalnya. Hal ini karena weight x berfungsi mengatur pembagian ruang horizontal tambahan bagi komponen dalam GridBagLayout.
+
+2. Ubah Direction formPanel di dalam isiPanel dari North menjadi Center, lalu tinggikan jendela. Apa
+perbedaannya?
+= saat direction pada formPanel di dalam isiPanel diubah dari North menjadi Center, lalu jendela ditinggikan posisi form menjadi berada di tengah secara vertikal. Sementara itu, jika menggunakan North, form tetap berada di bagian atas jendela.
+
+3. Hapus baris setMinimumSize(getSize()) di konstruktor, lalu kecilkan jendela sekecil mungkin. Bagian
+mana yang rusak lebih dulu?
+= Bagian field input dan label pada form akan rusak lebih dulu karena ruang jendela semakin sempit. Field input akan mengecil, teks bisa terpotong, dan susunan komponen menjadi kurang rapi sehingga form sulit dibaca.
