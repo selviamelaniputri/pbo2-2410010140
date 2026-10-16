@@ -2,7 +2,7 @@
 
 ## Jawaban Pertanyaan Refleksi (Bagian G)
 
-Lihat file [PERTANYAAN REFLEKSI.md](PERTANYAAN%20REFLEKSI.md).
+(PERTANYAAN%20REFLEKSI.md).
 
 ## Sketsa Form dan Tabel Rancangan
 
