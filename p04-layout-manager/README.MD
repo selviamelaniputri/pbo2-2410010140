@@ -80,7 +80,22 @@ Field input dan label pada form rusak lebih dulu karena ruang jendela semakin se
 
 ## Saran dari Teman (Tahap 4)
 
-- [Isi saran dari teman di sini, salin dari penilaian teman.docx]
+**Hasil pemeriksaan:**
+
+| No | Pemeriksaan | Ya atau Belum |
+|----|-------------|---------------|
+| 1 | Label singkat, jelas, dan sejajar | Ya |
+| 2 | Isian dikelompokkan dengan judul bagian | Ya |
+| 3 | Placeholder dipakai untuk isian yang punya format | Ya |
+| 4 | Komponen sesuai jenis data | Ya |
+| 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
+| 6 | Jarak antar komponen konsisten | Ya |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Belum |
+| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout | Ya |
+
+**Saran:**
+
+Radio button Jenis Anggota (Mahasiswa, Dosen, Umum) tersebar jauh saat jendela dilebarkan. Sebaiknya ubah Weight X ketiganya jadi 0.0 atau taruh dalam satu panel FlowLayout rata kiri, supaya tetap rapat di samping label.
 
 ## Deklarasi Penggunaan AI
 
