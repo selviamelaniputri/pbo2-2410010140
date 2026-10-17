@@ -112,6 +112,9 @@ Field input dan label pada form rusak lebih dulu karena ruang jendela semakin se
 
 Radio button Jenis Anggota (Mahasiswa, Dosen, Umum) tersebar jauh saat jendela dilebarkan. Sebaiknya ubah Weight X ketiganya jadi 0.0 atau taruh dalam satu panel FlowLayout rata kiri, supaya tetap rapat di samping label.
 
+Penilaian Teman dari :
+Siti Ekarina Septianor 2410010364
+
 ## Deklarasi Penggunaan AI
 
 Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme. 
