@@ -29,6 +29,21 @@ Agar susunan komponen lebih rapi dan mudah diatur. Diletakkan di North agar form
 
 ![Sketsa form](<Foto sketsa form.jpeg>)
 
+| Bagian | Komponen | Jenis | Layout |
+|--------|----------|-------|--------|
+| Header | Judul "Form Anggota Perpustakaan" dan subjudul "Silahkan isi data dengan benar!" | JLabel | Panel header, North |
+| isiPanel | Pembungkus formPanel | JPanel | BorderLayout, formPanel di North |
+| formPanel | Seluruh isian form | JPanel | GridBagLayout |
+| Data Anggota | NPM | JLabel + JTextField | Label kolom 0, field kolom 1, Fill horizontal |
+| | Nama | JLabel + JTextField | Label kolom 0, field kolom 1, Fill horizontal |
+| | Program Studi | JLabel + JComboBox | Label kolom 0, combo kolom 1 |
+| | Jenis Anggota (Mahasiswa, Dosen, Umum) | JRadioButton + ButtonGroup | Kolom 1, Weight X 0.0 |
+| Kontak | Email (placeholder nama@gmail.com) | JLabel + JTextField | Label kolom 0, field kolom 1 |
+| | Nomor HP (placeholder 0xxxx) | JLabel + JTextField | Label kolom 0, field kolom 1 |
+| | Alamat | JLabel + JTextArea dalam JScrollPane | Label kolom 0, area kolom 1 |
+| Persetujuan | Setuju dengan peraturan dan tata tertib perpustakaan | JCheckBox | Satu baris penuh |
+| Tombol | Batal, Daftar | JButton | Panel tombol, South, rata kanan |
+
 ## Tangkapan Layar FormAnggotaPerpustakaan
 
 Ukuran awal:
@@ -99,4 +114,4 @@ Radio button Jenis Anggota (Mahasiswa, Dosen, Umum) tersebar jauh saat jendela d
 
 ## Deklarasi Penggunaan AI
 
-Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki susunan kalimat pada dokumen. Ide, rancangan, serta penulisan kode berasal dari saya sendiri, dan setiap saran dari AI sudah saya periksa terlebih dahulu sebelum dipakai.
+Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme. 
