@@ -32,19 +32,13 @@ File form:
 
 ## 4. Jawaban Eksperimen Praktikum 3
 
-### Eksperimen 1: Event `itemStateChanged`
-
 **Pertanyaan:** Hapus pemeriksaan `if (evt.getStateChange() == ItemEvent.SELECTED)` dan tambahkan `System.out.println("item berubah");`. Berapa kali pesan tercetak setiap pilihan diganti?
 
 **Jawaban:** Pesan tercetak dua kali setiap pilihan diganti karena event `itemStateChanged` dipanggil untuk pilihan lama yang berstatus `DESELECTED` dan pilihan baru yang berstatus `SELECTED`.
 
-### Eksperimen 2: Event `keyPressed`
-
 **Pertanyaan:** Mengapa hasil konversi terlambat satu karakter ketika menggunakan `keyPressed`?
 
 **Jawaban:** Event `keyPressed` dijalankan ketika tombol keyboard ditekan, sebelum karakter baru dimasukkan ke dalam `JTextField`. Akibatnya, proses konversi membaca teks sebelum karakter terbaru ditambahkan sehingga hasilnya terlambat satu karakter.
-
-### Eksperimen 3: Menghapus `try-catch`
 
 **Pertanyaan:** Apa yang muncul di jendela Output ketika huruf diketik setelah blok `try-catch` dihapus?
 
@@ -52,13 +46,9 @@ File form:
 
 ## 5. Jawaban Eksperimen Praktikum 4
 
-### Eksperimen 1: Dua Event Listener
-
 **Pertanyaan:** Jika `actionPerformed` dibuat melalui Events tanpa menghapus lambda di konstruktor, berapa kali pesan tercetak?
 
 **Jawaban:** Pesan `kali` tercetak dua kali karena tombol memiliki dua listener, yaitu event handler dari GUI Builder dan lambda di konstruktor. Satu tombol sebaiknya hanya menggunakan satu cara agar aksi tidak dijalankan berulang kali.
-
-### Eksperimen 2: Menambahkan Operasi Modulus
 
 **Pertanyaan:** Apa yang diubah pada tab Design dan tab Source untuk menambahkan tombol `%`?
 
@@ -66,8 +56,6 @@ File form:
 
 - **Tab Design:** Layout `operatorPanel` diubah menjadi `GridLayout` dengan satu baris dan lima kolom agar semua tombol dapat tampil.
 - **Tab Source:** Tambahkan event `actionPerformed` untuk memanggil `hitung('%')`, kemudian tambahkan operasi modulus pada method `hitung()` menggunakan `case '%' -> a % b;`. Operasi ini menghasilkan sisa pembagian dua bilangan.
-
-### Eksperimen 3: Tombol Hapus
 
 **Pertanyaan:** Mengapa kursor langsung berada di isian pertama setelah tombol Hapus ditekan?
 
@@ -95,14 +83,7 @@ Screenshot dialog konfirmasi sebelum aplikasi ditutup.
 
 ## 7. Deklarasi Penggunaan AI
 
-ChatGPT digunakan sebagai alat bantu untuk memahami materi event handling Java Swing, memperoleh panduan penggunaan Git dan GitHub, serta membantu menyusun dokumentasi dan jawaban eksperimen praktikum.
-
-Kode program dan hasil akhir diperiksa kembali agar sesuai dengan implementasi praktikum.
-
-## 8. Repository GitHub
-
-**Repository utama:**
-
+Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme.
 https://github.com/selviamelaniputri/pbo2-2410010140
 
 **Folder project P05:**
