@@ -32,32 +32,32 @@ File form:
 
 ## 4. Jawaban Eksperimen Praktikum 3
 
-**Pertanyaan:** Hapus pemeriksaan `if (evt.getStateChange() == ItemEvent.SELECTED)` dan tambahkan `System.out.println("item berubah");`. Berapa kali pesan tercetak setiap pilihan diganti?
+**1. Pertanyaan:** Hapus pemeriksaan `if (evt.getStateChange() == ItemEvent.SELECTED)` dan tambahkan `System.out.println("item berubah");`. Berapa kali pesan tercetak setiap pilihan diganti?
 
 **Jawaban:** Pesan tercetak dua kali setiap pilihan diganti karena event `itemStateChanged` dipanggil untuk pilihan lama yang berstatus `DESELECTED` dan pilihan baru yang berstatus `SELECTED`.
 
-**Pertanyaan:** Mengapa hasil konversi terlambat satu karakter ketika menggunakan `keyPressed`?
+**2. Pertanyaan:** Mengapa hasil konversi terlambat satu karakter ketika menggunakan `keyPressed`?
 
 **Jawaban:** Event `keyPressed` dijalankan ketika tombol keyboard ditekan, sebelum karakter baru dimasukkan ke dalam `JTextField`. Akibatnya, proses konversi membaca teks sebelum karakter terbaru ditambahkan sehingga hasilnya terlambat satu karakter.
 
-**Pertanyaan:** Apa yang muncul di jendela Output ketika huruf diketik setelah blok `try-catch` dihapus?
+**3. Pertanyaan:** Apa yang muncul di jendela Output ketika huruf diketik setelah blok `try-catch` dihapus?
 
 **Jawaban:** Program menampilkan kesalahan `NumberFormatException` di jendela Output karena teks yang berisi huruf tidak dapat dikonversi menjadi tipe data `double`. Tanpa `try-catch`, kesalahan tersebut tidak ditangani oleh method konversi.
 
 ## 5. Jawaban Eksperimen Praktikum 4
 
-**Pertanyaan:** Jika `actionPerformed` dibuat melalui Events tanpa menghapus lambda di konstruktor, berapa kali pesan tercetak?
+**1. Pertanyaan:** Jika `actionPerformed` dibuat melalui Events tanpa menghapus lambda di konstruktor, berapa kali pesan tercetak?
 
 **Jawaban:** Pesan `kali` tercetak dua kali karena tombol memiliki dua listener, yaitu event handler dari GUI Builder dan lambda di konstruktor. Satu tombol sebaiknya hanya menggunakan satu cara agar aksi tidak dijalankan berulang kali.
 
-**Pertanyaan:** Apa yang diubah pada tab Design dan tab Source untuk menambahkan tombol `%`?
+**2. Pertanyaan:** Apa yang diubah pada tab Design dan tab Source untuk menambahkan tombol `%`?
 
 **Jawaban:**
 
 - **Tab Design:** Layout `operatorPanel` diubah menjadi `GridLayout` dengan satu baris dan lima kolom agar semua tombol dapat tampil.
 - **Tab Source:** Tambahkan event `actionPerformed` untuk memanggil `hitung('%')`, kemudian tambahkan operasi modulus pada method `hitung()` menggunakan `case '%' -> a % b;`. Operasi ini menghasilkan sisa pembagian dua bilangan.
 
-**Pertanyaan:** Mengapa kursor langsung berada di isian pertama setelah tombol Hapus ditekan?
+**3. Pertanyaan:** Mengapa kursor langsung berada di isian pertama setelah tombol Hapus ditekan?
 
 **Jawaban:** Karena method hapus memanggil `angka1Field.requestFocusInWindow()`, sehingga fokus keyboard dikembalikan ke kolom angka pertama setelah kedua kolom dikosongkan dan label hasil diatur kembali menjadi "Hasil: 0".
 
@@ -84,8 +84,3 @@ Screenshot dialog konfirmasi sebelum aplikasi ditutup.
 ## 7. Deklarasi Penggunaan AI
 
 Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme.
-https://github.com/selviamelaniputri/pbo2-2410010140
-
-**Folder project P05:**
-
-https://github.com/selviamelaniputri/pbo2-2410010140/tree/main/p05-event-handling
