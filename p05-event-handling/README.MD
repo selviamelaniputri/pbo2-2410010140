@@ -1,17 +1,15 @@
+
 # P05 - Event Handling
 
 ## 1. Form Anggota Perpustakaan
 
-Project ini merupakan praktikum Pemrograman Berorientasi Objek 2 tentang penerapan event handling menggunakan Java Swing.
+Praktikum ini membahas penerapan event handling pada Java Swing menggunakan Java. Form Anggota Perpustakaan digunakan untuk memasukkan data anggota, mengelola persetujuan, menampilkan ringkasan data, dan mengonfirmasi penutupan aplikasi.
 
-Form Anggota Perpustakaan digunakan untuk memasukkan data keanggotaan, mengelola persetujuan, menampilkan ringkasan data, dan mengonfirmasi penutupan aplikasi.
-
-File form yang digunakan:
-
+File form:
 - `FormAnggotaPerpustakaan.java`
 - `FormAnggotaPerpustakaan.form`
 
-## 2. Peta Event
+## 2. Peta Event Form Anggota Perpustakaan
 
 | Komponen | Event | Fungsi |
 |---|---|---|
@@ -23,44 +21,85 @@ File form yang digunakan:
 
 ## 3. Tabel Pengamatan Praktikum 2
 
-Tabel pengamatan yang telah diisi dapat dibuka melalui tautan berikut:
+| No. | Tindakan | Event yang tercatat |
+|---|---|---|
+| 1 | Arahkan kursor ke tombol, lalu jauhkan | `MouseEvent`: kursor masuk ke tombol; `MouseEvent`: kursor keluar dari tombol. |
+| 2 | Klik tombol Klik saya | `ActionEvent`: tombol diklik. |
+| 3 | Centang lalu hapus centang Aktifkan fitur | `ItemEvent`: kotak dicentang; `ItemEvent`: centang dihapus. |
+| 4 | Ganti pilihan dari Pagi menjadi Malam | `ItemEvent`: memilih Malam. |
+| 5 | Klik isian, lalu ketik kata "abc" | `FocusEvent`: isian mendapat fokus; `KeyEvent`: mengetik huruf a, b, dan c. |
+| 6 | Klik tombol setelah mengetik di isian | `FocusEvent`: isian kehilangan fokus; `MouseEvent`: kursor masuk ke tombol; `ActionEvent`: tombol diklik. |
 
-[📄 Buka Tabel Pengamatan Praktikum 2](./Tabel%20Pengamatan.docx)
+## 4. Jawaban Eksperimen Praktikum 3
 
-## 4. Jawaban Eksperimen Praktikum 3 dan Praktikum 4
+### Eksperimen 1: Event `itemStateChanged`
 
-Jawaban eksperimen tersedia pada file berikut:
+**Pertanyaan:** Hapus pemeriksaan `if (evt.getStateChange() == ItemEvent.SELECTED)` dan tambahkan `System.out.println("item berubah");`. Berapa kali pesan tercetak setiap pilihan diganti?
 
-- [Jawaban Eksperimen 3](./Jawaban%20Eksperimen%203.txt)
-- [Jawaban Eksperimen 4](./Jawaban%20eksperimen%204.txt)
+**Jawaban:** Pesan tercetak dua kali setiap pilihan diganti karena event `itemStateChanged` dipanggil untuk pilihan lama yang berstatus `DESELECTED` dan pilihan baru yang berstatus `SELECTED`.
 
-## 5. Dokumentasi Screenshot
+### Eksperimen 2: Event `keyPressed`
 
-### 5.1 Properties - Events Tombol Daftar
+**Pertanyaan:** Mengapa hasil konversi terlambat satu karakter ketika menggunakan `keyPressed`?
+
+**Jawaban:** Event `keyPressed` dijalankan ketika tombol keyboard ditekan, sebelum karakter baru dimasukkan ke dalam `JTextField`. Akibatnya, proses konversi membaca teks sebelum karakter terbaru ditambahkan sehingga hasilnya terlambat satu karakter.
+
+### Eksperimen 3: Menghapus `try-catch`
+
+**Pertanyaan:** Apa yang muncul di jendela Output ketika huruf diketik setelah blok `try-catch` dihapus?
+
+**Jawaban:** Program menampilkan kesalahan `NumberFormatException` di jendela Output karena teks yang berisi huruf tidak dapat dikonversi menjadi tipe data `double`. Tanpa `try-catch`, kesalahan tersebut tidak ditangani oleh method konversi.
+
+## 5. Jawaban Eksperimen Praktikum 4
+
+### Eksperimen 1: Dua Event Listener
+
+**Pertanyaan:** Jika `actionPerformed` dibuat melalui Events tanpa menghapus lambda di konstruktor, berapa kali pesan tercetak?
+
+**Jawaban:** Pesan `kali` tercetak dua kali karena tombol memiliki dua listener, yaitu event handler dari GUI Builder dan lambda di konstruktor. Satu tombol sebaiknya hanya menggunakan satu cara agar aksi tidak dijalankan berulang kali.
+
+### Eksperimen 2: Menambahkan Operasi Modulus
+
+**Pertanyaan:** Apa yang diubah pada tab Design dan tab Source untuk menambahkan tombol `%`?
+
+**Jawaban:**
+
+- **Tab Design:** Layout `operatorPanel` diubah menjadi `GridLayout` dengan satu baris dan lima kolom agar semua tombol dapat tampil.
+- **Tab Source:** Tambahkan event `actionPerformed` untuk memanggil `hitung('%')`, kemudian tambahkan operasi modulus pada method `hitung()` menggunakan `case '%' -> a % b;`. Operasi ini menghasilkan sisa pembagian dua bilangan.
+
+### Eksperimen 3: Tombol Hapus
+
+**Pertanyaan:** Mengapa kursor langsung berada di isian pertama setelah tombol Hapus ditekan?
+
+**Jawaban:** Karena method hapus memanggil `angka1Field.requestFocusInWindow()`, sehingga fokus keyboard dikembalikan ke kolom angka pertama setelah kedua kolom dikosongkan dan label hasil diatur kembali menjadi "Hasil: 0".
+
+## 6. Dokumentasi Screenshot
+
+### 6.1 Properties - Events Tombol Daftar
 
 Screenshot jendela Properties bagian Events untuk tombol Daftar.
 
 ![Properties bagian Events tombol Daftar](./layar%20jendela%20Properties%20bagian%20Events.png)
 
-### 5.2 Dialog Ringkasan Data Anggota
+### 6.2 Dialog Ringkasan Data Anggota
 
 Screenshot dialog yang menampilkan ringkasan data anggota setelah tombol Daftar ditekan.
 
 ![Dialog ringkasan data anggota](./dialog%20ringkasan.png)
 
-### 5.3 Dialog Konfirmasi Keluar
+### 6.3 Dialog Konfirmasi Keluar
 
 Screenshot dialog konfirmasi sebelum aplikasi ditutup.
 
 ![Dialog konfirmasi keluar](./dialog%20konfirmasi%20keluar.png)
 
-## 6. Deklarasi Penggunaan AI
+## 7. Deklarasi Penggunaan AI
 
 ChatGPT digunakan sebagai alat bantu untuk memahami materi event handling Java Swing, memperoleh panduan penggunaan Git dan GitHub, serta membantu menyusun dokumentasi dan jawaban eksperimen praktikum.
 
 Kode program dan hasil akhir diperiksa kembali agar sesuai dengan implementasi praktikum.
 
-## 7. Repository GitHub
+## 8. Repository GitHub
 
 **Repository utama:**
 
