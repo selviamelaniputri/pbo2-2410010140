@@ -1,0 +1,13 @@
+Jawaban Eksperimen 3:
+
+1. Hapus pemeriksaan if (evt.getStateChange() == ItemEvent.SELECTED) dan tambahkan
+System.out.println("item berubah"); di dalam event handler. Berapa kali pesan tercetak setiap pilihan diganti?
+= pesan tercetak 2 kali setiap pilihan diganti itu karena event itemstatechanged dipanggil untuk pilihan yang lama yang berstatus deselected dan pilihan baru yang berstatus selected
+
+2. Di jendela Properties bagian Events, kosongkan event keyReleased pada celsiusField, lalu buat event
+keyPressed yang memanggil konversi(). Mengapa hasil yang tampil terlambat satu karakter?
+=Karena event keypressed dijalankan saat tombol keyboard ditekan sebelum karakter baru dimasukkan ke dalam JTextField. jadi proses konversi membaca teks sebelum karakter terbaru ditambahkan sehingga hasilnya terlambat satu karakter
+
+3. Hapus blok try dan catch di method konversi, lalu ketik huruf pada isian. Apa yang muncul di jendela
+Output?
+= Program menampilkan pesan kesalahan berupa numberformatexception di jendela output karena teks yang berisi huruf tidak dapat dikonversi menjadi tipe data double. Tanpa try dan catch kesalahan tersebut tidak ditangani oleh method konversi

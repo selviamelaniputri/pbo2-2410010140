@@ -1,0 +1,12 @@
+Jawaban eksperimen 4:
+
+1. Buat event actionPerformed untuk kaliButton melalui Events tanpa menghapus lambda di konstruktor, lalu
+tambahkan System.out.println("kali"); di kedua tempat. Berapa kali pesan tercetak? Mengapa satu tombol sebaiknya hanya memakai satu cara?
+= Pesan kali tercetak 2 kali karena tombol memiliki dua listener yaitu event handler dari gui builder dan lambda di konstruktor. Satu tombol sebaiknya hanya menggunakan satu cara untuk menghindari aksi yang dijalankan berulang kali
+
+2. Tambahkan tombol % untuk sisa bagi (modulus). Apa saja yang diubah di tab Design dan di tab Source?
+di tab design : layout operatorPanel diubah jadi gridlayout dengan 1 baris dan 5 column agar semua tombol bisa tampil
+tab source : tambah event actionperformed agar bisa memanggil hitung('%') lalu menambahkan operasi modulus di method hitung() dengan kode case '&'-> a % b;, jadi operasi ini akan menghasilkan sisa pembagian 2 bilangan
+
+3. Tekan tombol Hapus. Mengapa kursor langsung berada di isian pertama?
+= Karena method hapus memanggil angka1Field.requestFocusInWindow(), sehingga fokus keyboard dikembalikan ke kolom angka pertama setelah kedua kolom dikosongkan dan label hasil diatur kembali menjadi "Hasil: 0"
