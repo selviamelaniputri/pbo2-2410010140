@@ -81,7 +81,4 @@ Perubahannya terletak pada tombol yang digunakan, dari Ctrl+D menjadi Delete tan
 Error yang muncul adalah **NullPointerException**, karena saat `initComponents()` dijalankan, objek model belum dibuat atau masih bernilai null. Sementara itu, komponen `kontakTable` sudah mencoba menggunakan model melalui perintah `kontakTable.setModel(model);`. Akibatnya, terjadi kesalahan karena model belum diinisialisasi ketika dibutuhkan.
 
 ## Deklarasi Penggunaan AI
-
-Saya menggunakan ChatGPT sebagai alat bantu untuk memahami materi Java Swing, JTable, AbstractTableModel, JDialog, menu, event handling, serta membantu menyusun dokumentasi dan jawaban eksperimen.
-
-Kode program dipelajari, disesuaikan, dan diuji kembali oleh saya.
+Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme.
