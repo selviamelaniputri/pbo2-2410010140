@@ -17,10 +17,26 @@ File yang disertakan:
 
 ## 2. Peer Review
 
-Berikut merupakan dokumen peer review yang diterima dari teman.
+### Tabel Hasil Peer Review
 
-**Nama Peninjau:** Siti Ekarina Septiano  
+**Nama Peninjau:** Siti Ekarina Septianor
 **NPM:** 2410010364
+
+**Nama Pemilik Form:** Selvia Melani Putri
+**NPM:** 2410010140
+
+| No. | Heuristik | Temuan | Skor | Saran |
+|---|---|---|---|---|
+| 1 | Visibilitas status sistem | Status ringkasan tidak berubah ketika isian sudah diperbaiki. Tombol Daftar nonaktif sebelum persetujuan dicentang tanpa penjelasan. | 2 | Perbarui atau kosongkan statusLabel setelah isian diperbaiki. Tambahkan tooltip pada tombol Daftar. |
+| 2 | Kesesuaian dengan dunia nyata | Semua jenis anggota wajib mengisi NPM dan Program Studi, padahal Dosen dan Umum umumnya tidak memiliki keduanya. | 2 | Sesuaikan isian berdasarkan jenis anggota atau jelaskan bahwa form ditujukan untuk mahasiswa. |
+| 3 | Kendali dan kebebasan pengguna | Tombol Batal memiliki konfirmasi, tetapi tombol X langsung menutup aplikasi tanpa konfirmasi. | 2 | Tambahkan konfirmasi ketika jendela ditutup menggunakan windowClosing. |
+| 4 | Konsistensi dan standar | Placeholder hanya tersedia pada NPM, Email, dan HP. Tooltip hanya tersedia pada NPM. | 1 | Tambahkan placeholder pada Nama dan tooltip pada Nama, Email, serta Nomor HP. |
+| 5 | Pencegahan kesalahan | Nama masih dapat menerima angka. NPM dan HP dapat menerima huruf melalui Ctrl+V. | 2 | Tolak angka pada Nama dan gunakan DocumentFilter untuk NPM serta HP. |
+| 6 | Mengenali, bukan mengingat | Petunjuk format NPM, Email, dan HP tersedia, tetapi aturan Nama dan Nomor HP baru terlihat setelah terjadi kesalahan. | 1 | Tampilkan petunjuk format sejak awal melalui tooltip atau placeholder. |
+| 7 | Fleksibilitas dan efisiensi | Enter menjadi tombol default, tetapi tidak berfungsi ketika Daftar nonaktif dan tidak memindahkan fokus ke isian berikutnya. | 1 | Pertimbangkan navigasi fokus menggunakan Enter dan tambahkan petunjuk syarat tombol Daftar. |
+| 8 | Desain estetis dan minimalis | Tampilan rapi, tetapi font keterangan berbeda dari komponen lain dan kalimat keterangan belum diakhiri titik. | 1 | Seragamkan font dan rapikan teks keterangan. |
+| 9 | Membantu memperbaiki kesalahan | Pesan kesalahan tetap muncul ketika pengguna sedang memperbaiki isian. | 1 | Hapus tanda kesalahan secara langsung menggunakan DocumentListener. |
+| 10 | Bantuan dan dokumentasi | Petunjuk hanya berupa keterangan, tooltip pada NPM, dan placeholder. Belum ada petunjuk untuk isian lain maupun tombol pintas. | 1 | Tambahkan tooltip dan petunjuk singkat mengenai tombol pintas Alt. |
 
 [📄 Lihat Dokumen Peer Review](peer%20review.docx)
 
