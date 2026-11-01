@@ -146,15 +146,6 @@ Dokumen jawaban:
 
 ## 7. Deklarasi Penggunaan AI
 
-Dalam pengerjaan praktikum ini, saya menggunakan ChatGPT sebagai alat bantu untuk:
-
-1. Memahami konsep validasi input pada Java Swing.
-2. Membantu mengidentifikasi dan memperbaiki kesalahan berdasarkan hasil peer review.
-3. Memahami penggunaan DocumentFilter dan DocumentListener.
-4. Membantu menyusun dokumentasi dan README proyek.
-
-Seluruh implementasi dan pengujian aplikasi dilakukan dengan menyesuaikan kebutuhan praktikum.
+Dalam pengerjaan tugas ini, saya menggunakan dua alat AI: ChatGPT untuk memeriksa kode program, dan Claude untuk memperbaiki kalimat serta pembuatan isi readme.
 
 ---
-
-**Pemrograman Berbasis Objek 2 – Pertemuan 6**
