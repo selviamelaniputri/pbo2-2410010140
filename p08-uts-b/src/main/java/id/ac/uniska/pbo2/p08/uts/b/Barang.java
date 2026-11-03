@@ -1,3 +1,6 @@
+//  Nama : Selvia Melani Putri
+//  NPM : 2410010140
+
 package id.ac.uniska.pbo2.p08.uts.b;
 
 public class Barang {
